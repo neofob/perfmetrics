@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os
 import sys
 
-requires = ['setuptools']
+requires = ['setuptools', 'six']
 
 if sys.version_info[:2] < (2, 7):
     requires.append('unittest2')
@@ -12,8 +12,8 @@ here = os.path.dirname(__file__)
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
-setup(name='perfmetrics',
-      version='2.0',
+setup(name='netaccess_perfmetrics',
+      version='2.3',
       author='Shane Hathaway',
       author_email='shane@hathawaymix.org',
       description='Send performance metrics about Python code to Statsd',
@@ -26,7 +26,7 @@ setup(name='perfmetrics',
                    "License :: Repoze Public License",
                    "Topic :: System :: Monitoring",
                    ],
-      url="https://github.com/hathawsh/perfmetrics",
+      url="https://github.com/NetAccessCorp/perfmetrics",
       license='BSD-derived (http://www.repoze.org/LICENSE.txt)',
       packages=find_packages(),
       include_package_data=True,
